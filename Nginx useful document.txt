@@ -1,0 +1,50 @@
+cd /usr/share/nginx/html - This is the default path where nginx is taking files from. we can make any path here before html and we can do location based routing.
+The path which we mention here should be the same in /etc/nginx/conf.d/default.conf 
+
+
+
+Nginx default.conf file config 
+
+
+
+server {
+    listen       80 default_server;
+    server_name  localhost;
+
+    #access_log  /var/log/nginx/host.access.log  main;
+
+    location / {
+        root   /usr/share/nginx/psponline;
+        index  index.html index.htm;
+    }
+
+    location /onlineadmin {
+        alias /usr/share/nginx/onlineadmin;
+        index  index.html index.htm;
+    }
+
+    location / {
+        root   /usr/share/nginx2/mpassport/;
+        try_files $uri /public/index.html;
+    }
+
+
+*onlineadmin is path based routing
+
+
+
+Nginx as a API Gateway
+
+-
+
+
+location /v1/online/cc/fetfclist {
+proxy_pass route_path;
+}
+
+location /v1/workLi/ {
+proxy_pass route_path;
+}
+
+route_path uspr route krwa dega
+
