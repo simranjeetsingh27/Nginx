@@ -19,7 +19,7 @@ server {
     }
 
     location /onlineadmin {
-        alias /usr/share/nginx/onlineadmin;
+        alias /usr/share/nginx/onlinadmin;
         index  index.html index.htm;
     }
 
