@@ -24,7 +24,7 @@ server {
     }
 
     location / {
-        root   /usr/share/nginx2/mpasport/;
+        root   /usr/share/nginx2/mpsport/;
         try_files $uri /public/index.html;
     }
 
