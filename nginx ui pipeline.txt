@@ -1,0 +1,34 @@
+pipeline {
+    agent {label 'server3'}
+    stages {
+        stage('Cleaning the Workspace') {
+            steps {
+                step([$class: 'WsCleanup'])
+            }
+        }
+        stage('git_clone') {
+            steps {
+                git branch: "mainx", 
+                credentialsId: 'git_pass', 
+                url: 'https://10.2it'
+            }
+        }
+        stage('Build Frontend') {
+            steps {
+                // Assuming your frontend project uses npm for dependencies and build
+                sh 'npm i -f'
+                //sh "npm install --save core-js@3"
+                sh 'npm run build'
+            }
+        }
+        stage('Deploy to Nginx') {
+            steps {
+                // Assuming Nginx is already installed and configured on the Jenkins agent
+                sh 'sudo rm -rf /usr/share/nginx/pboui/*'
+                sh 'sudo cp -r build/* /usr/share/nginx/pboui/'
+                sh 'sudo service nginx restart'
+            }
+        }
+
+    }
+}
