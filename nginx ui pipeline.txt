@@ -10,7 +10,7 @@ pipeline {
             steps {
                 git branch: "mainx", 
                 credentialsId: 'git_ss', 
-                url: 'https://10.2it'
+                url: 'https://.2it'
             }
         }
         stage('Build Frontend') {
