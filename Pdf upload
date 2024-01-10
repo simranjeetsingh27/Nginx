@@ -1,0 +1,13 @@
+First paste pdf in given path 
+
+/usr/share/nginx/html/psp/build
+
+Then add this in configuration file.
+path should be 
+/etc/nginx/conf.d/.conf file 
+
+location / {
+root /usr/share/nginx/html/psp/build;
+index index.html index.htm;
+try_files $uri /index/html;
+}
