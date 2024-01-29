@@ -2,7 +2,7 @@ First paste pdf in given path
 
 /usr/share/nginx/html/psp/build
 
-Then add this in configuration file
+Then add this in configuation file
 path should be 
 /etc/nginx/conf.d/.conf file 
 
