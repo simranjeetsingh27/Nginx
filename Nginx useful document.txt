@@ -1,5 +1,5 @@
 cd /usr/share/nginx/html - This is the default path where nginx is taking files from. we can make any path here before html and we can do location based routing.
-The path which we mention here should be the same in /etc/nginx/conf.d/default.conf 
+The path which we mention here should be same in /etc/nginx/conf.d/default.conf 
 
 
 
