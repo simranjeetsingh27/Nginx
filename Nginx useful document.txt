@@ -46,5 +46,5 @@ location /v1/workLi/ {
 proxy_pass route_path;
 }
 
-route_path uspr route krwa dega
+route_path uspr route krwa dega.
 
