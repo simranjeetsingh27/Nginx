@@ -3,7 +3,7 @@ The path which we mention here should be same in /etc/nginx/conf.d/default.conf
 
 
 
-Nginx default.conf file confg
+Nginx default.conf file config
 
 
 
